@@ -1,0 +1,44 @@
+//We export the document that contains the data in csv format, once the document is loaded we execute the ggplot2 library to be able to make the graph.  
+DataBase <- read.csv(file.choose())  
+library(ggplot2)  
+DataBase  
+
+//We filter all movie genres shown in the data.  
+
+filtration <- (DataBase == "action") | (DataBase$Genre == "adventure") |  
+(DataBase$Genre == "animation") | (DataBase$Genre == "comedy") | (DataBase$Genre == "drama")  
+
+//In this other leak, only the name of the company that made the movie will be shown.  
+
+filtration2 <- DataBase %in% c("Buena vista Studios", "WB","FOX","Universal", "Sony", "Paramount Studio")  
+
+//Here only the results of both filtrations are observed.  
+
+filtration  
+filtration2  
+
+//It was necessary to carry out a second data frame since it refers to the two filters created previously.  
+
+DataBase2 <- DataBase [filtration & filtration2,]  
+DataBase2  
+
+//To make the graph we will only use the DataBase 2 variable, since that is where all the filtered data is found.  
+
+Grafica <- ggplot(data = DataBase, aes(x = Genre, y = Gross...US))+  
+geom_jitter(aes(size = Budget...mill., colour= Studio)) +  
+geom_boxplot(alpha = 0.8, outlier.color = NA) +  
+scale_size_continuous(range = c(1,3))+  
+xlab("Genre")+  
+ylab("Gross % US")+  
+ggtitle("Domestis Gross % Genre") +  
+theme (  
+axis.title.x = element_text(colour = "Blue", size = 15),  
+axis.title.y = element_text(colour = "Blue", size = 15),  
+ axis.text.x = element_text(size = 10),  
+ axis.text.y = element_text (size = 10),  
+ plot.title = element_text(size = 10),  
+ legend.title = element_text(size = 10),
+text = element_text(family = "Sans")
+)  
+
+Grafica  
