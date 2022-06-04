@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="/Images/Title.png" />
+  <img src="/ImagesU3/TitleU3.jpg" />
 </p>
 
 > # Tecnológico Nacional de México Instituto Tecnológico de Tijuana
@@ -19,7 +19,7 @@
 > **Unidad:** 3
 >
 > **Titulo**
-> Practica evaluatoria U2
+> Practica evaluatoria U3
 >
 > **Alumnos**<br>
 > Anahi Del Carmen Hernandez Pablo *18210486* <br>
@@ -54,20 +54,26 @@ library(caTools)
 library(ElemStatLearn) 
 ```
 <p align="center"> 
-  <img src="/Imagen/im1.png" />
+  <img src="/ImagesU3/imq1.png" />
 </p>
 
 ```js
 # Importing the dataset  
 #data <- read.csv('Social_Network_Ads.csv')  
 data<- (file.choose())    
-dataset=data  
-dataset = data[3:5]  
-dataset$Purchased=factor(dataset$Purchased, levels = c(0,1)) 
+ 
 ```
+<p align="center"> 
+  <img src="/ImagesU3/imq2.png" />
+</p>
+
+
 
 ```js
 # Split the dataset into the training set and the test set  
+dataset=data  
+dataset = data[3:5]  
+dataset$Purchased=factor(dataset$Purchased, levels = c(0,1))
 set.seed(123)    
 split <- sample.split(dataset$Purchased, SplitRatio = 0.75)  
 training_set <- subset(dataset, split == TRUE)  
@@ -75,6 +81,13 @@ test_set <- subset(dataset, split == FALSE)
 training_set[-3]=scale(training_set[-3])  
 test_set[-3] = scale(test_set[-3])  
 ```
+<p align="center"> 
+  <img src="/ImagesU3/imq3.png" />
+</p>
+
+<p align="center"> 
+  <img src="/ImagesU3/imq4.png" />
+</p>
 
 
 ```js
@@ -86,13 +99,10 @@ classifier = naiveBayes(formula = Purchased ~ .,
 naiveBayes  
 
 ```
+<p align="center"> 
+  <img src="/ImagesU3/imq5.png" />
+</p>
 
-
-```js
-# Prediction of results  
-y_pred=predict(classifier, newdata = test_set[-3])  
-y_pred  
-```
 
 ```js
 # Create the confusion matrix  
@@ -100,6 +110,15 @@ cm = table(test_set[, 3], y_pred)
 cm  
 
 ```
+<p align="center"> 
+  <img src="/ImagesU3/imq6.png" />
+</p>
+
+<p align="center"> 
+  <img src="/ImagesU3/imq7.png" />
+</p><p align="center"> 
+  <img src="/ImagesU3/imq7.png" />
+</p>
 
 ```js
 # Visualizing the training set results  
@@ -120,7 +139,14 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 ```
 
+<p align="center"> 
+  <img src="/ImagesU3/imq8.png" />
+</p>
  
+<p align="center"> 
+  <img src="/ImagesU3/imq9.png" />
+</p>
+
 
 ```js
 # Visualising the Test set results  
@@ -139,7 +165,13 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 ```
 
+<p align="center"> 
+  <img src="/ImagesU3/imq10.png" />
+</p>
 
+<p align="center"> 
+  <img src="/ImagesU3/imq11.png" />
+</p>
 
 
 
