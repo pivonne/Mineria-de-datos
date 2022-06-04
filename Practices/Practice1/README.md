@@ -42,3 +42,4 @@ ggplot() +
   ylab('Salary')  
    
 
+#
