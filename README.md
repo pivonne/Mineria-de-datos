@@ -15,4 +15,4 @@
 >> * [PRACTICE 2 ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_3/Practices/Practice02)
 >> * [PRACTICE 3 ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_3/Practices/Practice3)
 >> * [PRACTICE 4 ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_3/Practices/Practice4)
->> * [EXAM ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_3/Evaluation)
+>> * [EXAM ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_3/EvaluationU3)
