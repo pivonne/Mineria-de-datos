@@ -1,8 +1,8 @@
-#Importing the dataset     
+# Importing the dataset     
 dataset<- read.csv(file.choose())     
 dataset <- dataset[, 3:5]    
 
-#Splitting the dataset into the Training set and Test set   
+# Splitting the dataset into the Training set and Test set   
 install.packages("caTools")   
 library(caTools)   
 set.seed(123)   
@@ -10,7 +10,7 @@ split <- sample.split(dataset$Purchased, SplitRatio = 0.75)
 training_set <- subset(dataset, split == TRUE)   
 test_set <- subset(dataset, split == FALSE)   
 
-#Feature scaling   
+# Feature scaling   
 training_set[, 1:2] <- scale(training_set[, 1:2])   
 test_set[, 1:2] <- scale(test_set[, 1:2])          
  
@@ -19,17 +19,17 @@ classifier = glm(formula = Purchased ~ .,
                  family = binomial,      
                  data = training_set)   
 
-#Predicting the Test set results   
+# Predicting the Test set results   
 prob_pred = predict(classifier, type = 'response', newdata = test_set[-3])   
 prob_pred   
 y_pred = ifelse(prob_pred > 0.5, 1, 0)   
 y_pred   
 
-#Making the Confusion Metrix   
+# Making the Confusion Metrix   
 cm = table(test_set[, 3], y_pred)   
 cm   
 
-#the ggplot library is installed and immediately the graphs are seen, visualization of the result of the training set   
+# the ggplot library is installed and immediately the graphs are seen, visualization of the result of the training set   
 library(ggplot2)   
 ggplot(training_set, aes(x=EstimatedSalary, y=Purchased)) + geom_point() +    
   stat_smooth(method="glm", method.args=list(family="binomial"), se=FALSE)   
@@ -42,7 +42,7 @@ ggplot(test_set, aes(x=EstimatedSalary, y=Purchased)) + geom_point() +
   
 ggplot(test_set, aes(x=Age, y=Purchased)) + geom_point() +    
   stat_smooth(method="glm", method.args=list(family="binomial"), se=FALSE)   
- #It is important to mention that the install.packages(ElemStatLearn) library had to be installed externally and installed in Rstudio    
+ # It is important to mention that the install.packages(ElemStatLearn) library had to be installed externally and installed in Rstudio    
 install.packages(ElemStatLearn)    
    
 install.packages(file.choose(), repos=NULL)   
