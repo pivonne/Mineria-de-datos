@@ -1,6 +1,6 @@
 # Data Mining
 
- >## UNIT 1Cancel changes
+ >## UNIT 1
 >> * [PRACTICE 1 ](https://github.com/pivonne/Mineria-de-datos/tree/Unit_1/Practices/Practice1)
 >> * [PRACTICE 2 ](https://github.com/pivonne/Mineria-de-datos/tree/Unit_1/Practices/Practice2)
 >> * [PRACTICE 3 ](https://github.com/pivonne/Mineria-de-datos/tree/Unit_1/Practices/Practica3)
