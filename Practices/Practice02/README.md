@@ -68,6 +68,6 @@ backwardElimination <- function(x, sl) {
 }  
 
 SL = 0.05  
-# dataset = dataset[, c(1,2,3,4,5)]  
+#dataset = dataset[, c(1,2,3,4,5)]  
 training_set  
 backwardElimination(training_set, SL)  

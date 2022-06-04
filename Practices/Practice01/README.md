@@ -1,11 +1,12 @@
-#Here we add this code to import the Salary_Data.csv file   
+
+# Here we add this code to import the Salary_Data.csv file   
 dataset<- read.csv(file.choose())   
  
 # Importing the dataset   
 dataset <- read.csv('Salary_Data.csv')  
 
-# Splitting the dataset into the Training set and Test set  
-# Install.packages('caTools')  
+#Splitting the dataset into the Training set and Test set  
+#Install.packages('caTools')  
 library(caTools)  
 set.seed(123)  
 split <- sample.split(dataset$Salary, SplitRatio = 2/3)  
@@ -41,5 +42,3 @@ ggplot() +
   xlab('Years of experience') +  
   ylab('Salary')  
    
-
-#
