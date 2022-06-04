@@ -1,3 +1,4 @@
+
 <p align="center"> 
   <img src="/ImagesU3/TitleU3.jpg" />
 </p>
@@ -172,6 +173,3 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 <p align="center"> 
   <img src="/ImagesU3/imq11.png" />
 </p>
-
-
-
