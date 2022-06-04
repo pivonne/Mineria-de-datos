@@ -1,14 +1,5 @@
+# Data Mining
 
-<p aligen ="center"> 
-  <img src="/Imagen/Title.png" />
-</p>
-
-# Data mining
-Evidence repository for the Data mining
-
-Unit 2 practice
-
-## Indice
-Unit two practice
-
- **Practice1:** [Practice1](https://github.com/pivonne/Mineria-de-datos/tree/Unid_2/Practice1)
+ >## UNIT 2
+>> * [PRACTICE 1 ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_2/Practice1)
+>> * [EXAM ](https://github.com/pivonne/Mineria-de-datos/tree/Unid_2/Evaluation2)
